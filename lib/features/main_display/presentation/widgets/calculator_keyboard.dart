@@ -41,14 +41,13 @@ class CalculatorKeyboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: _spacing),
-      child: GridView.count(
-        crossAxisSpacing: _spacing,
-        mainAxisSpacing: _spacing,
-        crossAxisCount: _columns,
-        children: _keyboardGrid.expand((w) => w).toList(),
-      ),
+    return GridView.count(
+      shrinkWrap: true,
+      physics: const ScrollPhysics(),
+      crossAxisSpacing: _spacing,
+      mainAxisSpacing: _spacing,
+      crossAxisCount: _columns,
+      children: _keyboardGrid.expand((w) => w).toList(),
     );
   }
 }

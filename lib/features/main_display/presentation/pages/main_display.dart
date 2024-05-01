@@ -13,27 +13,28 @@ class MainDisplay extends StatelessWidget {
           decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.background,
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              const Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    textAlign: TextAlign.right,
-                    "302 x 75",
-                  ),
-                  Text(
-                    textAlign: TextAlign.right,
-                    "22650",
-                  ),
-                ],
-              ),
-              Expanded(
-                child: CalculatorKeyboard(),
-              ),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      textAlign: TextAlign.right,
+                      "302 x 75",
+                    ),
+                    Text(
+                      textAlign: TextAlign.right,
+                      "22650",
+                    ),
+                  ],
+                ),
+                CalculatorKeyboard(),
+              ],
+            ),
           ),
         ),
       ),
